@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom' // get router
+import MarketFooter from './components/MarketFooter';
+import MarketHeader from './components/MarketHeader';
+import SignIn from './views/SignIn';
+import SignUp from './views/SignUp';
+import AdminLogin from './views/AdminLogin';
+import AdminPanel from './views/AdminPanel';
+import MainPageMarket from './components/user/MainPageMarket';
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <MarketHeader/>
+        <Routes>
+            <Route path='/' exact element={
+              <div className='mainDiv'>
+                  <MainPageMarket/>
+                <MarketFooter/>
+              </div>
+            }/>
+            <Route path='/signin' element={<><SignIn /></>} />
+            <Route path='/signup' element={<><SignUp /></>} />
+            <Route path='/adminLogin' element={<><AdminLogin /></>} />
+            <Route path='/adminPanel' element={<><AdminPanel/></>}/>
+          </Routes>
+          
+    </Router>
   );
 }
 
