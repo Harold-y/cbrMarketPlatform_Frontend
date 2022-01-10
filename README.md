@@ -22,6 +22,7 @@ After logging into the administration panel, you can edit the settings:
 
 The Authentification table, token, and other security steps were implemented so that it is easy to add and edit the items, merchandises, available international shipment addrs, personnels, auths, etc.
 ![image](https://user-images.githubusercontent.com/68500948/148694912-4daa5ced-7d7c-4622-968c-1365d1d126df.png)
+As an administrator, you can give your personnel different permission to edit these modules. Security frameworks have been implemented for you.
 
 There is also a profile page where you can edit your personnel profile.
 ![image](https://user-images.githubusercontent.com/68500948/148694932-5e1f8db4-39a0-4706-b868-9f3b606a4d5c.png)
